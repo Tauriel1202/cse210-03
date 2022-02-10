@@ -17,4 +17,3 @@ class Word:
     return self._word
 
 #This is a temporary call 
-Word().randomWord()

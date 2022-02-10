@@ -1,13 +1,19 @@
 #main gameplay
+from guess import *
+from randomWord import *
+
 class gameplay:
   def __init__(self):
     self.isPlaying = True
-    self._guess = ''
-    self._lives = 10
+    self._lives = 4
     self._win = False
   
+  def word(self):
+    self.word = Word
+    return self.word
+
   def letter(self):
-    self._guess = input('Choose a letter [a-z]: ').capitalize()
+    self._guess = Guess
     return self._guess
   
   def playing(self):
@@ -23,9 +29,15 @@ class gameplay:
       self._msg = 'You Died! X_X'
 
   def game(self):
-    if self.isPlaying:
-      print('WORD')
+    #plays the game
+    while self.isPlaying:
+      #gets a word
+      self.word()
+
+      #gets a letter
       self.letter(self)
+
+      #updates
       print('NEWWORD')
     
     else:
