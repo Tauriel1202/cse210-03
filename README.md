@@ -3,9 +3,9 @@
 Jumper is a game in which the player seeks to solve a puzzle by guessing the letters of a secret word one at a time.
 
 Software:
-VS Code
-GitHub
-Slack
+VS Code,
+GitHub,
+Slack,
 Zoom
 
 Team Members:
