@@ -11,7 +11,7 @@ class Jumper:
         self.__figure = Parachute()
 
     def play(self):
-        print(self.__word)
+        #print(self.__word)
 
         Word.show_blanks(self.__word, self.__correct)
         self.__figure.print(len(self.__incorrect))
