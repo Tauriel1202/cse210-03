@@ -3,7 +3,7 @@ import random
 
 class Word:
     __word_list = ['harass', 'format', 'dressing', 'spread', 'carbon', 'digital', 'haunt', 'challenge', 'sausage', 'systematic', 'sink', 'gene', 'diet', 'strange', 'minimize', 'ambiguous', 'compact', 'conscience', 'angle', 'flex', 'nun', 'settlement', 'camp', 'giant',
-                   'cultivate', 'angel', 'equinox', 'board', 'lid', 'view', 'soprano', 'elves', 'environment', 'econobox', 'twist', 'legislature', 'text', 'agency', 'defend', 'tooth', 'force', 'ethnic', 'wheel', 'repeat', 'essential', 'swipe', 'leader', 'steep', 'cultural', 'counter']
+                   'cultivate', 'angel', 'equinox', 'board', 'lid', 'view', 'soprano', 'champagne', 'environment', 'econobox', 'twist', 'legislature', 'text', 'agency', 'defend', 'tooth', 'force', 'ethnic', 'wheel', 'repeat', 'essential', 'swipe', 'leader', 'steep', 'cultural', 'counter']
 
     def _word_list(self, list):
         self.__word_list = list

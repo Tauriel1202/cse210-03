@@ -25,12 +25,16 @@ class Jumper:
 
             Word.show_blanks(self.__word, self.__correct)
             self.__figure.print(len(self.__incorrect))
+            if(self.win()):
+                print("You win")
+                break
 
     def win(self):
-
-        # self.__figure.last_state() --> lives
-        if (self.__figure.last_state() != 0 and self.__;)
-
-        # if (self.__figure.last_state() !=  and win !=True):
-
-        return False
+        win = False
+        for l in self.__word:
+            #print(l in self.__correct)
+            if l in self.__correct:
+                win = True
+            else:
+                return False
+        return win
