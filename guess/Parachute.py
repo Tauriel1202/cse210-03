@@ -1,24 +1,23 @@
-
 class Parachute:
     def __init__(self):
-        self.__last_state = 8
+        self.__last_state = 4
         self.__figure_state = [
-            " ___\n/___\\\n\\   /\n \\ /\n  o\n /|\\\n / \\",
-            " \n/___\\\n\\   /\n \\ /\n  o\n /|\\\n / \\",  # ___
-            " \n ___\\\n\\   /\n \\ /\n  o\n /|\\\n / \\",  # //////
-            " \n ___\n\\   /\n \\ /\n  o\n /|\\\n / \\",  # //////
-            " \n    \n\\   /\n \\ /\n  o\n /|\\\n / \\",  # ___
-            " \n    \n    /\n \\ /\n  o\n /|\\\n / \\",  # ///
-            " \n    \n    \n \\ /\n  o\n /|\\\n / \\",  # ////
-            " \n    \n    \n   /\n  o\n /|\\\n / \\",  # ////
-            " \n    \n    \n    \n  x\n /|\\\n / \\"  # ////
+            "  ___",
+            "/ ___ \ ",
+            "\     /",
+            " \   /",
+            "   O",
+            "  /|\ ",
+            "  / \ ",
         ]
 
     def print(self, errors):
-        if (errors >= self.__last_state):
-            print(self.__figure_state[self.__last_state])
-        else:
-            print(self.__figure_state[errors])
+        for i in range(errors, len(self.__figure_state)):
+            if errors >= self.__last_state and self.__figure_state[i] == "   O":
+                self.__figure_state[i] = "   X"
+
+            print(self.__figure_state[i])
+
         print("^^^^^^")
 
     def last_state(self):

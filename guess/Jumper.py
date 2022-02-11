@@ -3,7 +3,6 @@ from Word import Word
 
 
 class Jumper:
-
     def __init__(self):
         self.__word = Word().get_random_word()
         self.__correct = []
@@ -11,12 +10,10 @@ class Jumper:
         self.__figure = Parachute()
 
     def play(self):
-        #print(self.__word)
-
         Word.show_blanks(self.__word, self.__correct)
         self.__figure.print(len(self.__incorrect))
 
-        while (len(self.__incorrect) < self.__figure.last_state()):
+        while len(self.__incorrect) < self.__figure.last_state():
             option = input("Guess a letter [a-z]: ")
             if option in self.__word:
                 self.__correct.append(option)
@@ -25,14 +22,13 @@ class Jumper:
 
             Word.show_blanks(self.__word, self.__correct)
             self.__figure.print(len(self.__incorrect))
-            if(self.win()):
-                print("You win")
+            if self.win():
+                print("You win! 😀")
                 break
 
     def win(self):
         win = False
         for l in self.__word:
-            #print(l in self.__correct)
             if l in self.__correct:
                 win = True
             else:
