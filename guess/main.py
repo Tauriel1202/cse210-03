@@ -2,7 +2,11 @@ from Jumper import Jumper
 
 
 class Game:
+    """ Delegate the game  
+    
+    """
     def start(self):
+        """Start Jumping"""
         jumper = Jumper()
         jumper.play()
 

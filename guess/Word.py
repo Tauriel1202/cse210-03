@@ -2,6 +2,14 @@ import random
 
 
 class Word:
+
+    """A class that generate ramdon words from a list. 
+    
+
+    Attributes:
+        __word_list (string[]): A list of words
+    """
+
     def __init__(self):
         self.__word_list = [
             "story",
@@ -57,12 +65,20 @@ class Word:
         ]
 
     def _word_list(self, list):
+        """Constructs a new Word."""
         self.__word_list = list
 
     def get_random_word(self):
+        """Gets a new random word.
+        
+        Returns:
+            String: Word.
+        """
         return random.choice(self.__word_list)
 
     def show_blanks(word, correct):
+        """Print the letters and blanks.
+        """
         to_print = ""
         for char in word:
             if char in correct:
